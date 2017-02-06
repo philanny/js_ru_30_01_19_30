@@ -7,6 +7,7 @@ export default class Comments extends Component {
         isCommentsOpen: false
     }
 
+    //Это очень плохая идея - просто читай из this.props.comments
     comments = this.props.comments;
 
     render() {
