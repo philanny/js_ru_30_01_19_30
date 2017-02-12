@@ -3,6 +3,7 @@ import ArticleList from './ArticleList'
 import Chart from './Chart'
 import Select from 'react-select'
 import 'react-select/dist/react-select.css'
+import Range, { DateUtils } from "./MyDayPicker/index";
 
 class App extends Component {
     state = {
@@ -22,6 +23,7 @@ class App extends Component {
                 <Select options = {options} onChange={this.handleSelectChange} value={this.state.selection} multi/>
                 <ArticleList articles={articles}/>
                 <Chart articles={articles}/>
+                <Range />
             </div>
         )
     }

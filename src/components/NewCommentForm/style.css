@@ -1,0 +1,19 @@
+form {
+    border: 1px solid #000;
+    width: 400px;
+    padding: 10px;
+    height: 180px;
+    margin: 10px 0;
+}
+form input, form textarea, form button {
+    margin: 10px 0;
+    float: left;
+    width: 98%;
+}
+form span {
+    display: inline-block;
+    width: 100%;
+}
+form button {
+    width: 30%;
+}
