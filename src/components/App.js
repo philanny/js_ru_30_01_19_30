@@ -3,6 +3,7 @@ import ArticleList from './ArticleList'
 import Chart from './Chart'
 import Select from 'react-select'
 import 'react-select/dist/react-select.css'
+//лучше когда названия компонентов и файлов соответствуют
 import Range, { DateUtils } from "./MyDayPicker/index";
 
 class App extends Component {
