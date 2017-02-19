@@ -6,7 +6,7 @@ export default store => next => action => {
     let getId = () => {
         let n = Math.floor((1 + Math.random()) * 1000);
         if (commentIds.some(id => n === id)) {
-            getId()
+            return getId()
         } else {
             return n
         }
