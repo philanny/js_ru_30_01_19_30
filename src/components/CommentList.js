@@ -42,14 +42,21 @@ class CommentList extends Component {
         const {comments} = this.props
         if (!comments.length) return (<div>
             <h3>No comments yet</h3>
-            <NewCommentForm />
+            {this.getNewCommentForm()}
         </div>)
 
         const commentItems = comments.map(id => <li key={id}><Comment id={id} /></li>)
+        const commentIds = comments.map(id => id)
         return <div>
             <ul>{commentItems}</ul>
-            <NewCommentForm />
+            {this.getNewCommentForm(commentIds)}
         </div>
+    }
+
+    getNewCommentForm = commentIds => {
+        return (
+            <NewCommentForm articleId = {this.props.articleId} addComment={this.props.addComment} commentIds={commentIds} />
+        )
     }
 
     toggleOpen = ev => {
