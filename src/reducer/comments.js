@@ -9,6 +9,7 @@ export default (state = defaultState, action) => {
 
     switch (type) {
         case ADD_COMMENT:
+            // ...{ [payload.commentId] лишний спрэд
             return { ...state, ...{ [payload.commentId]: { ...payload.comment, id: payload.commentId } } }
     }
 
