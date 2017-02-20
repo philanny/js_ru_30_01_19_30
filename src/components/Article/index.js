@@ -59,6 +59,7 @@ class Article extends Component {
         return (
             <section>
                 {text}
+                {/*ок, но я бы уже просто article передавал*/}
                 <CommentList comments={comments} articleId={this.props.article.id} ref = {this.getCommentsRef} />
             </section>
         )
