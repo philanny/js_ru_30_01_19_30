@@ -30,6 +30,7 @@ export default (state = defaultState, action) => {
             commentsListByArticleId.push(payload.commentId)
 
             return {
+                //аналогично ...{entities: то же, что и entities:
                 ...state, ...{entities: {...state.entities, ...{[payload.articleId]: {...state.entities[payload.articleId], ...{commentsListByArticleId}}}}}
             }
     }
