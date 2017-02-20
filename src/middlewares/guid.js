@@ -1,4 +1,5 @@
 export default store => next => action => {
+	//через мидлвары будут проходить все экшины, суть в том, что делать их нужно максимально реюзабильными. Не завязывайся на один экшин
     if (!action.commentIds) return next(action);
 
     const {payload, commentIds, ...rest} = action
