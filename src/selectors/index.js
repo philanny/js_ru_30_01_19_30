@@ -22,3 +22,14 @@ export const articleSelectorFactory = () => createSelector(articlesGetter, idGet
     console.log('---', 'article selector', id)
     return entities.get(id)
 })
+
+
+
+const commentsGetter = state => state.comments.entities
+const commentsByArticleGetter = (state, props) => props.article.comments
+
+export const commentsSelector = createSelector(commentsGetter, commentsByArticleGetter, (entities, commentsIds) => {
+    const comments = entities.filter(comment => commentsIds.includes(comment.id))
+
+    return comments
+})
