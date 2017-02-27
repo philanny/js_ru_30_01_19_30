@@ -20,8 +20,10 @@ export default (state = defaultState, action) => {
         case LOAD_COMMENTS + SUCCESS:
             return state
                 .set('isLoading', false)
+                //почему .concat ? это же Map, используй .merge
                 .updateIn(['entities'], comments => comments.concat(arrayToMap(response, CommentModel)));
         case ADD_COMMENT:
+            //поменяй
             return state.set(randomId, {...payload.comment, id: randomId})
     }
 
