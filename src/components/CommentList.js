@@ -18,6 +18,7 @@ class CommentList extends Component {
             this.props.loadComments(this.props.article.id)
         }
     }
+    //я говорил, что использовать везьде shouldComponentUpdate плохая практика + здесь за тебя это делает connect, ты совсем ничего не выигрываешь
     shouldComponentUpdate(nextProps, nextState) {
         return nextProps.isLoading !== this.props.isLoading
     }
